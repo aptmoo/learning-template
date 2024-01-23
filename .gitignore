@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# Editor preferences
+.vscode
+
+# Makefiles
+Makefile
+*.make
+
+# Exclude deps
+!BinaryDependencies/
