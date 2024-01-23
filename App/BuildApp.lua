@@ -17,6 +17,12 @@ project "App"
 
         -- Deps
         "../Dependencies/GLFW/include",
+        "../BinaryDependencies/",
+    }
+
+    libdirs
+    {
+        "../BinaryDependencies/",
     }
 
     links
@@ -34,7 +40,6 @@ project "App"
     filter "system:linux"
         defines { "PLATFORM_LINUX" }
         libdirs { "/usr/lib", "../lib", }
-        files { "Backend/linux/**.h", "Backend/**.cpp" }
         links { "dl", "m", "pthread", "GL" }
         targetname "App.out"
 
